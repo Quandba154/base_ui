@@ -2,7 +2,7 @@ import { Input, Button, Form, Typography, notification } from "antd";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useMutation } from "@tanstack/react-query";
-import { register, SignUpDTO } from "../apis/auth.api";
+import { register, SignUpDTO } from "../shared/apis/auth.api";
 
 const Wrapper = styled.div`
   display: flex;

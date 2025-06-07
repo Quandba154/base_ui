@@ -1,7 +1,7 @@
 // create use Update User
 import { useMutation } from "@tanstack/react-query";
-import api from "../../apis/axiosCustom";
-import { appUrls } from "../../apis/contants";
+import api from "../../shared/apis/axiosCustom";
+import { appUrls } from "../../shared/apis/contants";
 import { useAccessToken } from "./useUserInfo";
 
 interface UpdateUserPayload {

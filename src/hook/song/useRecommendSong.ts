@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import api from "../../apis/axiosCustom";
+import api from "../../shared/apis/axiosCustom";
 import { useAccessToken } from "../auth/useUserInfo";
 import { Song } from "./useAllSongs";
-import { appUrls } from "../../apis/contants";
+import { appUrls } from "../../shared/apis/contants";
 
 export interface RecommendSong {
   _id: string;
@@ -18,7 +18,7 @@ export const useRecommendSong = () => {
     queryFn: async () => {
       const res = await api.get(`${appUrls.backendUrl}/song/recommend`, {
         headers: {
-            Authorization: `Bearer ${accessToken}`,
+          Authorization: `Bearer ${accessToken}`,
         },
       });
       return res.data.data;
@@ -26,4 +26,3 @@ export const useRecommendSong = () => {
     enabled: !!accessToken,
   });
 };
-

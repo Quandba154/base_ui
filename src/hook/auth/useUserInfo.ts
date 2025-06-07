@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { User } from "../../apis/auth.api";
-import { appUrls } from "../../apis/contants";
-import api from "../../apis/axiosCustom";
+import { User } from "../../shared/apis/auth.api";
+import { appUrls } from "../../shared/apis/contants";
+import api from "../../shared/apis/axiosCustom";
 
 export function useUserInfo() {
   const accessToken = useAccessToken();
@@ -15,7 +15,7 @@ export function useUserInfo() {
           },
         })
         .then((response) => {
-          return response.data.data
+          return response.data.data;
         }),
     enabled: !!accessToken,
   });

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion"; // Import framer-motion
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import { login, SignInDTO } from "../apis/auth.api";
+import { login, SignInDTO } from "../shared/apis/auth.api";
 
 const Wrapper = styled.div`
   display: flex;

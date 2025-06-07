@@ -1,4 +1,4 @@
-import { Song } from "../hook/song/useAllSongs";
+import { Song } from "../../hook/song/useAllSongs";
 import api from "./axiosCustom";
 import { appUrls } from "./contants";
 
@@ -14,7 +14,7 @@ export interface User {
   adminId?: string;
   createdAt: Date;
   updatedAt: Date;
-  favoriteSongs?: Song[]
+  favoriteSongs?: Song[];
 }
 export interface UpdateProfileDTO {
   username: string;
@@ -71,7 +71,7 @@ export const login = async (body: SignInDTO) => {
   return response.data;
 };
 
-export interface User{
+export interface User {
   _id: string;
   username: string;
   email: string;

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAccessToken } from "../auth/useUserInfo";
-import api from "../../apis/axiosCustom";
-import { appUrls } from "../../apis/contants";
+import api from "../../shared/apis/axiosCustom";
+import { appUrls } from "../../shared/apis/contants";
 import { Genre } from "../genre/useAllGenres";
 
 export interface Song {
@@ -21,7 +21,7 @@ export interface Song {
 
 export function useAllSongs() {
   const accessToken = useAccessToken();
-  
+
   return useQuery<Song[]>({
     queryKey: ["songs"],
     queryFn: () =>

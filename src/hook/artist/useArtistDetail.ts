@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAccessToken } from "../auth/useUserInfo";
 import { Artist } from "./useAllArtists";
-import { appUrls } from "../../apis/contants";
-import api from "../../apis/axiosCustom";
+import { appUrls } from "../../shared/apis/contants";
+import api from "../../shared/apis/axiosCustom";
 
 export const useArtistDetail = (artistId: string) => {
   const accessToken = useAccessToken();
