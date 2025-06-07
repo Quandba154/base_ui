@@ -1,7 +1,7 @@
 import { Menu, Button, Layout, Avatar, Popover } from "antd";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../../context/AuthContext";
+import { useAuth } from "../../../context/AuthHydration";
 import { useMemo } from "react";
 import { SearchBar } from "../../landing";
 import { useUserInfo } from "../../../hook/auth/useUserInfo";

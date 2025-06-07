@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 import RootRoutes from "./routes/RootRouter.tsx";
 import { ConfigProvider } from "antd";
-import { AuthProvider } from "./context/AuthContext.tsx";
+import { AuthProvider } from "./context/AuthHydration.tsx";
 import { AudioPlayerProvider } from "./context/AudioPlayerContext.tsx";
 import MusicPlayer from "./components/music/player/index.tsx";
 
